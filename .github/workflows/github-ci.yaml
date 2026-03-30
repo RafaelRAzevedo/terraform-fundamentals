@@ -45,7 +45,7 @@ jobs:
 
   terraform_cd:
     name: Terraform Apply (CD)
-    if: github.event_name == 'push'
+    if: github.event_name == 'pull_request'
     needs: terraform_ci
     runs-on: ubuntu-latest
     environment:
